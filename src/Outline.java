@@ -20,6 +20,8 @@ public class Outline {
     for (String word : words){
       System.out.println("  " + word);
     }
+    // With streams
+    words.stream().map(e -> "  "+e).forEach(System.out::println);
   }
 
   // Repeat this problem but without two spaces in front of each word.
@@ -32,6 +34,8 @@ public class Outline {
     for (String word : words){
       System.out.println(word);
     }
+    // With streams
+    words.stream().forEach(System.out::println);
   }
 
   // For each of the following lambda expressions (see Question 5 in Worksheet 2),
