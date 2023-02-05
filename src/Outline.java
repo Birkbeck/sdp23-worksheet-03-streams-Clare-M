@@ -50,7 +50,13 @@ public class Outline {
     List<String> words = getList();
     System.out.println("3:");
     // YOUR CODE
-    words.stream().filter(s -> s.length() < 4).toList();
+    //words.stream().filter(s -> s.length() < 4).toList();
+    System.out.println("3a:");
+    words.stream().filter(s -> s.length() < 4).forEach(System.out::println);
+    System.out.println("3b:");
+    words.stream().filter(s -> s.contains("b")).forEach(System.out::println);
+    System.out.println("3c:");
+    words.stream().filter(s -> (s.length() % 2) == 0).forEach(System.out::println);
   }
 
 
@@ -132,5 +138,6 @@ public class Outline {
   public static void main(String... args) { // varargs alternative to String[]
     question1();
     question2();
+    question3();
   }
 }
